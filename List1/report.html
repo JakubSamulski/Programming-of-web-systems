@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Report to authorites</title>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="places.html">Places worth visiting</a></li>
+        <li><a href="restaurants.html">Where to eat</a></li>
+        <li><a href="report.html">report detramment</a></li>
+    </ul>
+    <h1>Report detramment to authorites</h1>
+    <h2>by filling this form</h2>
+    <form>
+        <p>
+            <label for="District">Choose District</label>
+
+            <select name="District" id="District">
+            <option value="Old Town">Old Town</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Jagodno">Jagodno</option>
+            </select>    
+        </p>
+
+        <p>
+            <label>Place of accident</label>
+            <input id="idPlace" name="Place" type="text">
+        </p>
+
+        <p>
+            <label>Date and time of accident</label>
+            <input id="idDate" name="Date" type="datetime-local">
+        </p>
+
+        <p>
+            <label>affected tram number</label>
+            <input id="idTramNumber" name="TramNumber" type="number">
+        </p>
+
+        <p>
+            <label> Was anyone killed<br></label>
+            <input type="radio" id="idYes" name="anyoneKilled" value="Yes">
+            <label for="idYes">Yes</label><br>
+            <input type="radio" id="idNo" name="anyoneKilled" value="No">
+            <label for="idNo">No</label><br>
+            <input type="radio" id="idMaybe" name="anyoneKilled" value="Maybe">
+            <label for="idMaybe">Maybe</label><br>
+        </p>
+        <p>
+            <label> Who was affected<br></label>
+            <input type="checkbox" id="idTram" name="Tram" value="Tram">
+            <label for="idTram"> Tram</label><br>
+            <input type="checkbox" id="idCar" name="Car" value="Car">
+            <label for="idCar"> Car</label><br>
+            <input type="checkbox" id="idCyclist" name="Cyclist" value="Cyclist">
+            <label for="idCyclist"> Cyclist</label><br>
+            <input type="checkbox" id="idPedestrian" name="Pedestrian" value="Pedestrian">
+            <label for="idPedestrian"> Pedestrian</label><br>
+        </p>
+
+        <p>
+            <label for="idDescription">Description of accident</label><br>
+            <textarea id="idDescription" name="Description" rows="4" cols="50"></textarea>
+        </p>
+        <h3>Contact information</h3>
+        <p>
+            <label>Name</label>
+            <input id="idName" name="Name" type="text">
+        </p>
+
+        <p>
+            <label>Surname</label>
+            <input id="idSurname" name="Surname" type="text">
+        </p>
+
+        <p>
+            <label > Phone number</label>
+        </p>
+        <input type="range" value="123456789" min="1" max="1000000000" style="width: 1500px;" oninput="this.nextElementSibling.value = this.value">
+        <output>123456789</output>
+        <p>
+            <input type="submit" value="Send">
+            <input type="reset" value="clear">
+        </p>
+    </form>
+</body>
