@@ -15,11 +15,15 @@
     <form>
         <p>
             <label for="District">Choose District</label>
-
             <select name="District" id="District">
-            <option value="Old Town">Old Town</option>
-            <option value="Downtown">Downtown</option>
-            <option value="Jagodno">Jagodno</option>
+                <optgroup label="City center">
+                    <option value="Old Town">Old Town</option>
+                    <option value="Downtown">Downtown</option>
+                </optgroup>
+                <optgroup label="Outskirts">
+                    <option value="Jagodno">Jagodno</option>
+                    <option value="Swojczyce">Swojczyce</option>
+                </optgroup>
             </select>    
         </p>
 
