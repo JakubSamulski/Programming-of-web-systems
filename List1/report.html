@@ -13,10 +13,11 @@
       <li><a href="places.html">Places worth visiting</a></li>
       <li><a href="restaurants.html">Where to eat</a></li>
       <li><a href="report.html">Report detramment</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <h1>Report detramment to authorites</h1>
     <h2>by filling this form</h2>
-    <form>
+    <form autocomplete="on">
       <p>
         <label for="District">Choose District</label>
         <select name="District" id="District">
@@ -71,7 +72,7 @@
         />
         <label for="idPedestrian"> Pedestrian</label><br />
       </p>
-
+    
       <p>
         <label for="idDescription">Description of accident</label><br />
         <textarea
@@ -84,30 +85,49 @@
       <h3>Contact information</h3>
       <p>
         <label>Name</label>
-        <input id="idName" name="Name" type="text" />
+        <input id="idName" name="Name" type="text" autofocus />
       </p>
 
       <p>
         <label>Surname</label>
-        <input id="idSurname" name="Surname" type="text" />
+        <input id="idSurname" name="Surname" type="text" required />
+      </p>
+    
+
+      <p>
+        <label for="idMonth">month</label>
+        <input list="idMonth" id="idMonthChoice" name="monthChoice">
+        <datalist id="idMonth">
+          <option value="January"></option>
+          <option value="Febuary"></option>
+          <option value="March"></option>
+          <option value="April"></option>
+          <option value="May"></option>
+          <option value="June"></option>
+          <option value="July"></option>
+          <option value="August"></option>
+          <option value="September"></option>
+          <option value="October"></option>
+          <option value="November"></option>
+          <option value="December"></option>
+        </datalist>
+      </p>
+        
+      <p>
+        <label for="idEmail">E-mail</label>
+        <input type="email" id="idEmail" name="email" required>
       </p>
 
       <p>
-        <label> Phone number</label>
+        <label for="idPhone">Phone number</label>
+        <input type="tel" id="idPhone" name="phone" pattern="[+][\d]{2}\s[\d]{3}[-][\d]{3}[-][\d]{3}">
       </p>
-      <input
-        type="range"
-        value="123456789"
-        min="1"
-        max="1000000000"
-        style="width: 1500px"
-        oninput="this.nextElementSibling.value = this.value"
-      />
-      <output>123456789</output>
+ 
       <p>
         <input type="submit" value="Send" />
         <input type="reset" value="clear" />
       </p>
+
     </form>
 
     <p><a href="report.html" download="MyPage">Download this page</a></p>

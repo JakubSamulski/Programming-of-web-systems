@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h3>Subpages</h3>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="places.html">Places worth visiting</a></li>
+      <li><a href="restaurants.html">Where to eat</a></li>
+      <li><a href="report.html">Report detramment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <h2>
+        Feedback about the site
+    </h2>
+    <form>
+        <p>
+            <label>Name</label>
+            <input id="idName" name="Name" type="text" placeholder="Jakub" />
+          </p>
+    
+          <p>
+            <label>Surname</label>
+            <input id="idSurname" name="Surname" type="text" placeholder="Samulski" />
+          </p>
+
+          <p>
+            <input type="color" id="idFavColor" name="favColor"
+           value="#e66465">
+            <label for="color">Pick your favourite color on this site</label>
+          </p>
+
+          <p>
+            <label for="idFirstVisitMont">Month of your first visit on this site</label>
+            <input type="month" id="idFirstVisitMont" name="firstVisitMonth" min="2022-10" value="2022-10">
+          </p>
+
+          
+      <p>
+        <label> Your phone number</label>
+      </p>
+      <input
+        type="range"
+        value="123456789"
+        min="1"
+        max="1000000000"
+        style="width: 1500px"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>123456789</output>
+
+      <p>
+        <label for="idSearch">Search for bugs</label>
+        <input type="search" id="idSearch" name="bugs">
+        <button>Search</button>
+      </p>
+
+      <p>
+        <label for="idUrl"> enter your favourite site</label>
+        <input type="url" id="idUrl" name="url" placeholder="https://example.com"
+        pattern="https://.*">
+      </p>
+    </form>
+    </body>
+</html>
