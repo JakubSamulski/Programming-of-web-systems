@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Report to authorites</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+      <h3>Subpages</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="places.html">Places worth visiting</a></li>
+        <li><a href="restaurants.html">Where to eat</a></li>
+        <li><a href="report.html">Report detramment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <h1>Report detramment to authorites</h1>
+      <h2>by filling this form</h2>
+
+      <form autocomplete="on">
+        <p>
+          <label for="District">Choose District</label>
+          <select name="District" id="District">
+            <optgroup label="City center">
+              <option value="Old Town">Old Town</option>
+              <option value="Downtown">Downtown</option>
+            </optgroup>
+            <optgroup label="Outskirts">
+              <option value="Jagodno">Jagodno</option>
+              <option value="Swojczyce">Swojczyce</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label>Place of accident</label>
+          <input id="idPlace" name="Place" type="text" />
+        </p>
+
+        <p>
+          <label>Date and time of accident</label>
+          <input id="idDate" name="Date" type="datetime-local" />
+        </p>
+
+        <p>
+          <label> Was anyone killed<br /></label>
+          <input type="radio" id="idYes" name="anyoneKilled" value="Yes" />
+          <label for="idYes">Yes</label><br />
+          <input type="radio" id="idNo" name="anyoneKilled" value="No" />
+          <label for="idNo">No</label><br />
+          <input type="radio" id="idMaybe" name="anyoneKilled" value="Maybe" />
+          <label for="idMaybe">Maybe</label><br />
+        </p>
+        <p>
+          <label> Who was affected<br /></label>
+          <input type="checkbox" id="idTram" name="Tram" value="Tram" />
+          <label for="idTram"> Tram</label><br />
+          <input type="checkbox" id="idCar" name="Car" value="Car" />
+          <label for="idCar"> Car</label><br />
+          <input
+            type="checkbox"
+            id="idCyclist"
+            name="Cyclist"
+            value="Cyclist"
+          />
+          <label for="idCyclist"> Cyclist</label><br />
+          <input
+            type="checkbox"
+            id="idPedestrian"
+            name="Pedestrian"
+            value="Pedestrian"
+          />
+          <label for="idPedestrian"> Pedestrian</label><br />
+        </p>
+
+        <p>
+          <label for="idDescription">Description of accident</label><br />
+          <textarea
+            id="idDescription"
+            name="Description"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </p>
+        <h3>Contact information</h3>
+        <p>
+          <label>Name</label>
+          <input id="idName" name="Name" type="text" autofocus />
+        </p>
+
+        <p>
+          <label>Surname</label>
+          <input id="idSurname" name="Surname" type="text" required />
+        </p>
+
+        <p>
+          <label for="idMonth">month</label>
+          <input list="idMonth" id="idMonthChoice" name="monthChoice" />
+          <datalist id="idMonth">
+            <option value="January"></option>
+            <option value="Febuary"></option>
+            <option value="March"></option>
+            <option value="April"></option>
+            <option value="May"></option>
+            <option value="June"></option>
+            <option value="July"></option>
+            <option value="August"></option>
+            <option value="September"></option>
+            <option value="October"></option>
+            <option value="November"></option>
+            <option value="December"></option>
+          </datalist>
+        </p>
+
+        <p>
+          <label for="idEmail">E-mail</label>
+          <input type="email" id="idEmail" name="email" required />
+        </p>
+
+        <p>
+          <label for="idPhone">Phone number</label>
+          <input
+            type="tel"
+            id="idPhone"
+            name="phone"
+            pattern="[+][\d]{2}\s[\d]{3}[-][\d]{3}[-][\d]{3}"
+          />
+        </p>
+
+        <p>
+          <input type="submit" value="Send" />
+          <input type="reset" value="clear" />
+        </p>
+      </form>
+
+      <p><a href="report.html" download="MyPage">Download this page</a></p>
+
+      <p><a href="mailto:kubasamulski1@gmail.com">Comtact Administrator</a></p>
+
+  </body>
+</html>
