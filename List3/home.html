@@ -6,6 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home</title>
         <link rel="stylesheet" href="style.css">
+
+        <style>
+            .inline_styled {
+                height: 100em;
+                width: 100em;
+                color: red;
+                background-image: url('/List1-2/images/image4.jpeg');
+                background-position: top left;
+                background-repeat: repeat-x;
+                background-size: 50% 50%;
+                background-color: bisque;
+            }
+
+        </style>
     </head>
     <body>
         <ul>
@@ -13,13 +27,22 @@
             <li><a href="../List1-2/home.html">List of links</a></li>
             <li><a href="../List1-2/contact.html">Form</a></li>
             <li><a href="../List1-2/restaurants.html">Tables</a></li>
+            
         </ul>
 
         <div class="font_types">
-            aaaaa
+            <h3> font sizes demonstration</h3>
+            <p> text with default font size</p>
+            <p style="font-size: 2em;"> text with font size of 2em this is a recomended way of setting font size</p>
+            <p style="font-size: 200%;"> text  with font size 200% should be the same size as 2em</p>
+            <p style = "font-size: 50px;"> text formated with size of 500 px, its size depends on the screen's resolution</p>
+            <p style="font-size: 20pt;">text with font size of 72pt it shouldn't be used on webpages</p>
         </div>
-        <h2>
-            outside div
-        </h2>
+       <div class="inline_styled">
+
+        <p>
+            <h1>this div is inline styled</h1>
+        </p>
+       </div>
     </body>
 </html>
