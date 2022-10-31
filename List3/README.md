@@ -7,11 +7,11 @@
 6
 8
 10
-
-# do zrobienia
-7git
-9
 11
+# do zrobienia
+7
+9
+11 - nie wiem co z tym :first
 12
 
 # Kuba zrobi
@@ -19,5 +19,4 @@
 9
 
 # Pawel zrobi
-11
 12

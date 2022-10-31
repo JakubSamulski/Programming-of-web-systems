@@ -75,3 +75,11 @@ body {
     color: black;
   }
 }
+
+:not(p) {
+  color: #ff0000;
+}
+
+p {
+  color: green;
+}

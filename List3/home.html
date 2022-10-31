@@ -31,18 +31,18 @@
       </li>
       <li><a href="responsive.html">Responsive</a></li>
     </ul>
-
     <div class="font_types">
       <h3>font sizes demonstration</h3>
       <p>text with default font size</p>
       <p style="font-size: 2em">
-        text with font size of 2em this is a recomended way of setting font size
+        text with font size of 2em this is a recommended way of setting font
+        size
       </p>
       <p style="font-size: 200%">
         text with font size 200% should be the same size as 2em
       </p>
       <p style="font-size: 50px">
-        text formated with size of 500 px, its size depends on the screen's
+        text formatted with size of 500 px, its size depends on the screen's
         resolution
       </p>
       <p style="font-size: 20pt">
@@ -65,40 +65,86 @@
       <p>Hello 4</p>
       <p>Hello 5</p>
     </ol>
-
-    <div class="parent">
-      <div class="child_static">
-        <h1>Static position box - margin and padding</h1>
-      </div>
-      <div class="child_absolute">
-        <h1>Absolute</h1>
-      </div>
-      <div style="background-color: green;">
-        <h1>Second static</h1>
-      </div>
-      <div class="child_relative">
-        <h1>Relative</h1>
-      </div>
-      <div>
-        
+    <section id="box-model">
+      <div class="parent">
+        <div class="child_static">
+          <h1>Static position box - margin and padding</h1>
+        </div>
+        <div class="child_absolute">
+          <h1>Absolute</h1>
+        </div>
+        <div style="background-color: green">
+          <h1>Second static</h1>
+        </div>
+        <div class="child_relative">
+          <h1>Relative</h1>
+        </div>
+        <div>
           <img
             style="float: left"
             src="../List1-2/images/image1.jpeg"
             alt="image"
           />
           <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nobis
-          delectus ullam, similique corrupti cum modi necessitatibus quo
-          provident quos error. Laboriosam voluptatibus pariatur in modi nihil
-          iure odio temporibus.
-        </p>
-        <p style="clear: left">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-          dolor nisi doloremque esse aliquam assumenda! Mollitia iusto
-          consequuntur fuga labore ullam cupiditate minima quo iste quam vitae
-          vero, perferendis cum!
-        </p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nobis
+            delectus ullam, similique corrupti cum modi necessitatibus quo
+            provident quos error. Laboriosam voluptatibus pariatur in modi nihil
+            iure odio temporibus.
+          </p>
+          <p style="clear: left">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolor
+            nisi doloremque esse aliquam assumenda! Mollitia iusto consequuntur
+            fuga labore ullam cupiditate minima quo iste quam vitae vero,
+            perferendis cum!
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
+    <section id="pseudo-classes">
+      <h1 id="start_pseudo_classes">Pseudo classes</h1>
+      <div>
+        <h5>Button active</h5>
+        <a class="google_button" href="http://google.com">Go to google</a>
+        <h5>Checked, Disabled, Enabled, Focus</h5>
+        <form action="">
+          <input type="radio" checked="checked" value="male" name="gender" />
+          Male<br />
+          <input type="radio" value="female" name="gender" /> Female<br />
+          <input type="checkbox" checked="checked" value="Bike" /> I have a
+          bike<br />
+          <input type="checkbox" value="Car" /> I have a car <br />
+          <input
+            type="text"
+            disabled="disabled"
+            value="Disabled"
+          />Country<br />
+          <input type="text" value="Enabled" />Enabled<br />
+        </form>
+        <h5>Empty</h5>
+        <p>Not empty</p>
+        <p></p>
+        <h5>First child, Last child, Nth child, nth child last</h5>
+        <div>
+          <p class="nth_child">First</p>
+          <p class="nth_child">Second</p>
+          <p class="nth_child">Third</p>
+        </div>
+        <h5>Hover</h5>
+        <div class="hover_me">Hover me!</div>
+        <h5>link</h5>
+        <a class="custom_link" href="http://google.com"
+          >Link (visited - red, uvisited - green)</a
+        >
+        <h5>Only child</h5>
+        <div>
+          <p class="only_child">Only child</p>
+        </div>
+        <h5>required</h5>
+        <p>An optional input element:<br /><input /></p>
+        <p>A required input element:<br /><input required /></p>
+        <h5>target</h5>
+        <p><a href="#start_pseudo_classes">Jump to the start of pseudo classes exercises</a></p>
+      </div>
+    </section>
   </body>
 </html>
