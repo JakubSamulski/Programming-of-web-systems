@@ -3,18 +3,21 @@
 2
 3
 4
-5 klasy
+5
+6
+8
+10
 
 # do zrobienia
-5 id i zagniezdzenia
-6
-7
-8
+7git
 9
-10
 11
 12
 
 # Kuba zrobi
 7
 9
+
+# Pawel zrobi
+11
+12

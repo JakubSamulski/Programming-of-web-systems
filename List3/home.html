@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-        <style>
-            .inline_styled {
-                height: 100em;
-                width: 100em;
-                color: red;
-                background-image: url('/List1-2/images/image4.jpeg');
-                background-position: top left;
-                background-repeat: repeat-x;
-                background-size: 50% 50%;
-                background-color: bisque;
-            }
+    <style>
+      .background_picture {
+        height: 50em;
+        width: 100em;
+        color: red;
+        background-color: bisque;
+        background-image: url("../List1-2/images/image4.jpeg");
+        background-size: 30% 30%;
+        background-position: top;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href="../List1-2/home.html">Paragraphs</a></li>
+      <li><a href="../List1-2/places.html">List of links</a></li>
+      <li><a href="../List1-2/contact.html">Form</a></li>
+      <li>
+        <span><a href="../List1-2/restaurants.html">Tables</a></span>
+      </li>
+      <li><a href="responsive.html">Responsive</a></li>
+    </ul>
 
-        </style>
-    </head>
-    <body>
-        <ul>
-            <li><a class="active" href="paragraphs.html">Paragraphs</a></li>
-            <li><a href="../List1-2/home.html">List of links</a></li>
-            <li><a href="../List1-2/contact.html">Form</a></li>
-            <li><a href="../List1-2/restaurants.html">Tables</a></li>
-            
-        </ul>
+    <div class="font_types">
+      <h3>font sizes demonstration</h3>
+      <p>text with default font size</p>
+      <p style="font-size: 2em">
+        text with font size of 2em this is a recomended way of setting font size
+      </p>
+      <p style="font-size: 200%">
+        text with font size 200% should be the same size as 2em
+      </p>
+      <p style="font-size: 50px">
+        text formated with size of 500 px, its size depends on the screen's
+        resolution
+      </p>
+      <p style="font-size: 20pt">
+        text with font size of 72pt it shouldn't be used on webpages
+      </p>
+    </div>
+    <div class="background_picture" style="text-align: center">
+      <h1>Picture background internal css used</h1>
+    </div>
 
-        <div class="font_types">
-            <h3> font sizes demonstration</h3>
-            <p> text with default font size</p>
-            <p style="font-size: 2em;"> text with font size of 2em this is a recomended way of setting font size</p>
-            <p style="font-size: 200%;"> text  with font size 200% should be the same size as 2em</p>
-            <p style = "font-size: 50px;"> text formated with size of 500 px, its size depends on the screen's resolution</p>
-            <p style="font-size: 20pt;">text with font size of 72pt it shouldn't be used on webpages</p>
-        </div>
-       <div class="inline_styled">
+    <h1 id="h1_id">Special h1 with id css</h1>
 
-        <p>
-            <h1>this div is inline styled</h1>
+    <ol>
+      <p>Styles inside ol and p directly</p>
+      <div>
+        <p>Hello 1</p>
+      </div>
+      <p>Hello 2</p>
+      <p>Hello 3</p>
+      <p>Hello 4</p>
+      <p>Hello 5</p>
+    </ol>
+
+    <div class="parent">
+      <div class="child_static">
+        <h1>Static position box - margin and padding</h1>
+      </div>
+      <div class="child_absolute">
+        <h1>Absolute</h1>
+      </div>
+      <div style="background-color: green;">
+        <h1>Second static</h1>
+      </div>
+      <div class="child_relative">
+        <h1>Relative</h1>
+      </div>
+      <div>
+        
+          <img
+            style="float: left"
+            src="../List1-2/images/image1.jpeg"
+            alt="image"
+          />
+          <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic nobis
+          delectus ullam, similique corrupti cum modi necessitatibus quo
+          provident quos error. Laboriosam voluptatibus pariatur in modi nihil
+          iure odio temporibus.
         </p>
-       </div>
-    </body>
+        <p style="clear: left">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+          dolor nisi doloremque esse aliquam assumenda! Mollitia iusto
+          consequuntur fuga labore ullam cupiditate minima quo iste quam vitae
+          vero, perferendis cum!
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
