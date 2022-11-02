@@ -1,0 +1,98 @@
+.top-gap {
+  height: 20px;
+}
+.initial_nav {
+  height: 2em;
+  width: 100%;
+  background-color: rgb(146, 143, 143);
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(146, 143, 143);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 10em;
+  height: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 10em;
+  z-index: 1;
+  float: left;
+}
+
+nav ul li {
+  display: none;
+  width: 10em;
+  height: 2em;
+  float: left;
+}
+
+nav:hover ul li {
+  display: block;
+}
+
+/* 2 level */
+
+nav ul li ul {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 2em;
+  z-index: 1;
+  float: left;
+}
+
+nav ul li ul li {
+  background-color: rgb(83, 83, 83);
+  width: 10em;
+  height: 2em;
+  clear: left;
+}
+
+nav ul li ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li ul li:hover {
+    background-color: rgb(119, 118, 118);
+  }
+
+nav ul li:hover ul {
+  display: block;
+}
+
+.first_ul {
+  left: 10em;
+}
+
+.second_ul {
+  left: 20em;
+}
+
+.third_ul {
+  left: 30em;
+}
