@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(255, 244, 181);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 80px 100px;
+    border-radius: 10%;
+    background-color: rgb(236, 104, 95);
+    margin: auto;
+}
+
+h2 {
+    display: inline-block;
+    margin: 50px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    margin-top: 90px;
+
+}

@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 25px;
+    display: none;
+}
+
+.on {
+    display: inline;
+}
+
+.off {
+    display: none;
+}
+
+#start {
+    text-align: center;
+    margin: auto;
+    padding: 10px 20px;
+    margin: 25px;
+}
+
