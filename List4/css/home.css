@@ -11,7 +11,20 @@ a {
     border-radius: 10%;
     background-color: rgb(236, 104, 95);
     margin: auto;
+    transition-duration: 0.4s;
 }
+
+a:hover {
+    background-color: rgb(233, 77, 66);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+a:active {
+    box-shadow: 0 5px #666;
+    color: black;
+    transform: translateY(2px);
+    transition-duration: 50ms;
+  }
 
 h2 {
     display: inline-block;

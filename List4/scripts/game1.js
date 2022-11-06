@@ -1,4 +1,8 @@
 document.getElementById("start").addEventListener("click", prepareStart)
+Array.from(document.getElementsByClassName("btn")).forEach(button => {
+    button.addEventListener("click", checkWin)
+});
+
 var randomMonth
 var chance
 
@@ -8,12 +12,10 @@ function prepareStart() {
 }
 
 function toggleButtons() {
-    var gameButtons = document.getElementsByClassName('btn')
+    var gameButtons = document.getElementsByClassName("btn")
     
     for (let i = 0; i < gameButtons.length; i++) {
         gameButtons[i].classList.toggle('on');
-        gameButtons[i].addEventListener("click", checkWin)
-        
     }
     document.getElementById("start").classList.toggle("off")
 }

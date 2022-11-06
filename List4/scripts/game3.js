@@ -2,6 +2,7 @@ document.getElementById("startBtn").addEventListener("click", run);
 
 function run() {
   var randomNumber = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNumber)
   var nrOfGuesses = 0;
   while (true) {
     nrOfGuesses++;
@@ -14,7 +15,7 @@ function run() {
           randomNumber +
           "\nCongratulations, you guessed the number!\nYou needed " +
           nrOfGuesses +
-          " chances"
+          " guesses"
       );
       break;
     } else if (guess < randomNumber) {
