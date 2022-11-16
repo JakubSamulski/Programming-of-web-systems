@@ -43,13 +43,8 @@ function logKey(e) {
 
 
 function onChange(){
-    font =document.getElementById("input-font").value
+    console.log("a")
+    let font =document.getElementById("input-font").value
     document.getElementById("fontChange").style.fontFamily=font
 }
 
-
-function change_color(){
-        
-
-
-}
