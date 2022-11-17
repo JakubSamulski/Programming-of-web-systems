@@ -1,17 +1,15 @@
 const paragraph = document.createElement('p');
-paragraph.innerHTML ='createElement + appendChild Hello';
+paragraph.innerHTML ='createElement + appendChild';
 document.getElementById('div1').appendChild(paragraph);
 
-const textNode = document.createTextNode('Text Node');
+const textNode = document.createTextNode('Text Node - Insert before');
 const node_text = document.createElement('p');
 node_text.appendChild(textNode);
 document.getElementById('div1').insertBefore(node_text, document.getElementById('h1-1'));
 
-document.getElementById('div1').insertBefore(document.createTextNode('Text node 2'), document.getElementById('h1-1'));
-
 const toReplace = document.getElementById('h1-2');
 const replacedBy = document.createElement('h2');
-replacedBy.innerHTML = "Replaced"
+replacedBy.innerHTML = "Replace child"
 document.getElementById('div1').replaceChild(replacedBy, toReplace);
 
 const toRemove = document.getElementById('h1-3');
