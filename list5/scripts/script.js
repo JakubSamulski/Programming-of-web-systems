@@ -4,7 +4,7 @@ document.getElementById("hover").addEventListener("mouseover",mouseOver)
 document.getElementById("hover").addEventListener("mouseout",mouseOut)
 
 document.body.addEventListener('keydown', function(event) {
-    console.log()
+    //console.log(event.key)
     if(event.altKey){
         document.body.style.backgroundColor='green'
     }
