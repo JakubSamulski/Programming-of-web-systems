@@ -8,7 +8,6 @@
                 die();
             }
         }
-
         validatePhone();
         echo "hello <br>" . 'we once said "we don\'t want more derailments" but it is what it is' . "<br>";
         // backslash as escape character
