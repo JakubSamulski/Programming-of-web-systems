@@ -16,7 +16,7 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <h2>Feedback about the site</h2>
-    <form>
+    <form action="./scripts/contact.php" method="post">
       <p>
         <label>Name</label>
         <input id="idName" name="Name" type="text" placeholder="Jakub" />
@@ -58,6 +58,7 @@
         value="123456789"
         min="1"
         max="1000000000"
+        name="phoneNumber"
         style="width: 1500px"
         oninput="this.nextElementSibling.value = this.value"
       />
@@ -78,6 +79,10 @@
           placeholder="https://example.com"
           pattern="https://.*"
         />
+      </p>
+
+      <p>
+        <input type="submit" value="Submit">
       </p>
     </form>
   </body>
