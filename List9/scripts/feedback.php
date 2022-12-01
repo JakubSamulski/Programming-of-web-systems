@@ -24,10 +24,14 @@
         }
         else
         {
-            echo "derailment at " . $place. "<br>";
+            echo "derailment at " . $place . "<br>";
         }
 
         echo "Report recived from " . $_SERVER['REMOTE_ADDR'];
+
+
+        $pattern="/adam/";
+        echo "<br>" . preg_replace($pattern, "Ewa", "adam ma kota");
 
         ?>
     </body>
