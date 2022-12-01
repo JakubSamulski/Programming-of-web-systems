@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    background-color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.action-button {
+    padding: 10px 20px;
+    margin: 25px;
+    background-color: darkcyan;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: rgb(0, 102, 102);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.action-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+    transition-duration: 50ms;
+  }
+
+.btn {
+    display: none;
+}
+
+.on {
+    display: inline;
+}
+
+.off {
+    display: none;
+}
+
+#start {
+    text-align: center;
+    margin: auto;
+    padding: 10px 20px;
+    margin: 25px;
+}
+
