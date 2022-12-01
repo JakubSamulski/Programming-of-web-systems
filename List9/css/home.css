@@ -4,7 +4,7 @@ body {
 
 }
 
-a {
+.game_buttons {
     display: block;
     text-decoration: none;
     padding: 80px 100px;
@@ -14,12 +14,12 @@ a {
     transition-duration: 0.4s;
 }
 
-a:hover {
+.game_buttons:hover {
     background-color: rgb(233, 77, 66);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-a:active {
+.game_buttons:active {
     box-shadow: 0 5px #666;
     color: black;
     transform: translateY(2px);
