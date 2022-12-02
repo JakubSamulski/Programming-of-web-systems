@@ -1,3 +1,14 @@
+<?php
+session_start();
+?>
+
+<?php
+if (!isset($_SESSION['username']) || $_SESSION['username'] == "") {
+    header("Location: error_403.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

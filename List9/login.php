@@ -41,6 +41,9 @@ session_start();
         } else {
           $msg = 'Wrong username or password';
         }
+      } elseif ($_SESSION['loggedOut'] == true) {
+        $msg = 'You logged out successfully';
+        unset($_SESSION['loggedOut']);
       }
       echo $msg;
       ?>

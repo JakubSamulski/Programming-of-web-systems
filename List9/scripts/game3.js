@@ -2,7 +2,7 @@ document.getElementById("startBtn").addEventListener("click", run);
 
 function run() {
   var randomNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(randomNumber)
+  console.log(randomNumber);
   var nrOfGuesses = 0;
   while (true) {
     nrOfGuesses++;
@@ -25,3 +25,4 @@ function run() {
     }
   }
 }
+  
