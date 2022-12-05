@@ -17,6 +17,13 @@ function run() {
           nrOfGuesses +
           " guesses"
       );
+     $.ajax({
+        type: "POST",
+        url: "test.php",
+        data: { highest_score: nrOfGuesses }
+      })
+      document.location.reload(true)
+
       break;
     } else if (guess < randomNumber) {
       alert("Number is higher");

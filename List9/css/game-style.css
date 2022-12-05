@@ -3,7 +3,9 @@ body {
     background-color: aquamarine;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.highest_score{
+    clear: both;
+}
 .action-button {
     padding: 10px 20px;
     margin: 25px;
