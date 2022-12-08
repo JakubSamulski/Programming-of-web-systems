@@ -31,6 +31,10 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "") {
             echo "Highest Score: None";
         }
     ?>
+
+    
+    <p id="cookies_id"></p>
+    <script>document.getElementById("cookies_id").innerHTML = document.cookie;</script>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="scripts/game3.js" href="js/jquery-1.11.3.min.js"></script>

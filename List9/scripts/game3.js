@@ -22,6 +22,7 @@ function run() {
         url: "test.php",
         data: { highest_score: nrOfGuesses }
       })
+      
       document.location.reload(true)
 
       break;
