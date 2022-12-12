@@ -30,6 +30,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] == "") {
     </div>
     <div>
         <a href="scripts/logout.php">Logout</a>
+        <a href="registration-edit.php">Edit profile</a>
     </div>
 </body>
 

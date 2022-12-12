@@ -15,35 +15,6 @@ session_start();
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
                 ?>" method="post">
     <h2>Registration form</h2>
-    <div>
-      <?php
-      $msg = '';
-
-      if (
-        isset($_POST['login']) && !empty($_POST['username'])
-        && !empty($_POST['password'])
-      ) {
-
-        if (
-          $_POST['username'] == 'pawel' &&
-          $_POST['password'] == 'pawel'
-        ) {
-          $_SESSION['valid'] = true;
-          $_SESSION['timeout'] = time();
-          $_SESSION['username'] = 'pawel';
-
-          $msg = 'You have entered valid use name and password';
-          header('Location: home.php');
-        } else {
-          $msg = 'Wrong username or password';
-        }
-      } elseif ($_SESSION['loggedOut'] == true) {
-        $msg = 'You logged out successfully';
-        unset($_SESSION['loggedOut']);
-      }
-      echo $msg;
-      ?>
-    </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
@@ -61,6 +32,21 @@ session_start();
       <button type="submit" name="login">Register</button>
     </div>
   </form>
+
+  <?php //Na razie basic insert
+  $conn = mysqli_connect("localhost", "root", "", "game_app_database");
+
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
+
+  $sql = "INSERT INTO users (Username, Password, FirstName, LastName) VALUES ('$username', '$password', '$firstname', '$lastname')";
+  echo mysqli_query($conn, $sql);
+
+  mysqli_close($conn); ?>
+
+
 </body>
 
 </html>

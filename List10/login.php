@@ -57,7 +57,7 @@ session_start();
       <input type="password" placeholder="Enter Password" name="password" required />
 
       <button type="submit" name="login">Login</button>
-      <a href="registration.php">You don't have an account? Register now!</a>
+      <a href="registration-edit.php">You don't have an account? Register now!</a>
     </div>
   </form>
 </body>
