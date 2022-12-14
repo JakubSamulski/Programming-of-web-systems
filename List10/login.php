@@ -24,26 +24,34 @@ session_start();
       $msg = '';
 
       if (
-        isset($_POST['login']) && !empty($_POST['username'])
+        !empty($_POST['username'])
         && !empty($_POST['password'])
       ) {
-
-        if (
-          $_POST['username'] == 'pawel' &&
-          $_POST['password'] == 'pawel'
-        ) {
-          $_SESSION['valid'] = true;
-          $_SESSION['timeout'] = time();
-          $_SESSION['username'] = 'pawel';
-
-          $msg = 'You have entered valid use name and password';
-          header('Location: home.php');
-        } else {
+        $conn = mysqli_connect("localhost", "root", "", "game_app_database");
+        $username = $_POST['username'];
+        $result = mysqli_query($conn, "SELECT * FROM users WHERE Username = '$username'");
+        $row = mysqli_fetch_assoc($result);
+        $password =  $row['Password'];
+        
+        if (!$result) {
           $msg = 'Wrong username or password';
         }
+        else {
+          if ($_POST['password'] == $password) {
+            $_SESSION['valid'] = true;
+            $_SESSION['timeout'] = time();
+            $_SESSION['username'] = 'pawel';
+  
+            $msg = 'You have entered valid use name and password';
+            $_SESSION['loggedOut'] = false;
+            header('Location: home.php');
+          } else {
+            $msg = 'Wrong username or password';
+          }
+        }
+        mysqli_close($conn);
       } elseif ($_SESSION['loggedOut'] == true) {
         $msg = 'You logged out successfully';
-        unset($_SESSION['loggedOut']);
       }
       echo $msg;
       ?>
