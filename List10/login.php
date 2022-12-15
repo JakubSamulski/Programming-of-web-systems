@@ -40,7 +40,7 @@ session_start();
           if ($_POST['password'] == $password) {
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
-            $_SESSION['username'] = 'pawel';
+            $_SESSION['username'] = $username;
   
             $msg = 'You have entered valid use name and password';
             $_SESSION['loggedOut'] = false;

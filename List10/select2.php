@@ -21,7 +21,7 @@ $result = $conn->query($sql2);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_row()) {
-    echo quotemeta("id.: ") . $row[0]. " - Login: " . $row[1]. " - Name: " . $row[2]. " - LastName: " . $row[3]. "<br>";
+    echo quotemeta("id: ") . $row[0]. " - Login: " . $row[1]. " - Name: " . $row[3]. " - LastName: " . $row[4]. "<br>";
   }
 } else {
   echo "0 results";

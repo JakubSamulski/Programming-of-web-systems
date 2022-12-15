@@ -49,8 +49,10 @@ session_start();
         runQuery($sql);
       }
     } else {
-      $sql = "UPDATE users SET Username = '$username', Password = '$password', FirstName = '$firstname', LastName = '$lastname' WHERE Username = '$username'";
+      $currentUser = $_SESSION['username'];
+      $sql = "UPDATE users SET Username = '$username', Password = '$password', FirstName = '$firstname', LastName = '$lastname' WHERE Username = '$currentUser'";
       $msg = runQuery($sql);
+      $_SESSION['username'] = $username;
     }
   } elseif ($_SESSION['loggedOut'] == false) {
 
