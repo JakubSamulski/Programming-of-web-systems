@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org en">
+<head>
+  <meta charset="text/html; UTF-8">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Add student form</title>
+</head>
+<body>
+<h1>Add a new student</h1>
+<form action="#" th:action="@{/student/add}" th:object="${student}" method="post">
+  <p>Id: <input type="text" th:field="*{id}" /></p>
+  <p>First name: <input type="text" th:field="*{firstName}" /></p>
+  <p>Last name: <input type="text" th:field="*{lastName}" /></p>
+  <p>index: <input type="number" th:field="*{index}" /></p>
+  <p>login: <input type="text" th:field="*{login}" /></p>
+  <p>password: <input type="text" th:field="*{password}" /></p>
+  <p><input type="submit" value="Add" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org en">
+<head>
+  <meta charset="text/html; UTF-8">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Details</title>
+</head>
+<body>
+<h1>Details</h1>
+<p>
+  <table  class="table table-striped table-bordered" th:object="${student}">
+  <thead>
+  <tr>
+    <th>Property</th>
+    <th>Value</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Id</td>
+      <td th:text="*{id}"></td>
+    </tr>
+    <tr>
+      <td>First name</td>
+      <td th:text="*{firstName}"></td>
+    </tr>
+    <tr>
+      <td>Last name</td>
+      <td th:text="*{lastName}"></td>
+    </tr>
+    <tr>
+      <td>Index</td>
+      <td th:text="*{index}"></td>
+    </tr>
+    <tr>
+      <td>Login</td>
+      <td th:text="*{login}"></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td class="table-danger" th:text="*{password}"></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+</body>
+</html>
