@@ -6,12 +6,12 @@
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Students list</title>
+  <title>Products list</title>
 </head>
 <body>
-<h1>Students list</h1>
-<a class="btn btn-primary" href="/student/seed">Seed data</a>
-<a class="btn btn-primary" href="/student/add">Add student</a>
+<h1>Products list</h1>
+<a class="btn btn-primary" href="/product/seed">Seed data</a>
+<a class="btn btn-primary" href="/product/add">Add Product</a>
 <div class="content">
           <table class="display table table-bordered" style="width:800px">
             <thead class="text-center">
@@ -24,14 +24,14 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="student : ${studentList}">
-              <td class="text-right"th:text= "${student.getId()}"></td>
-              <td class="text-left"th:text= "${student.getFirstName()}"></td>
-              <td class="text-left" th:text= "${student.getLastName()}"></td>
-              <td class="text-center" th:text= "${student.getIndex()}"></td>
-              <td><a class="btn btn-primary" th:href="@{/student/details(id=${student.id})}">details</a></td>
-              <td><a class="btn btn-primary" th:href="@{/student/{studentId}/edit(studentId=${student.getId()})}">edit</a></td>
-              <td><a class="btn btn-danger" th:href="@{/student/remove(id=${student.id})}">remove</a></td>
+            <tr th:each="product : ${productList}">
+              <td class="text-right"th:text= "${product.getId()}"></td>
+              <td class="text-left"th:text= "${product.getName()}"></td>
+              <td class="text-left" th:text= "${product.getWeight()}"></td>
+              <td class="text-center" th:text= "${product.getPrice()}"></td>
+              <td><a class="btn btn-primary" th:href="@{/product/details(id=${product.id})}">details</a></td>
+              <td><a class="btn btn-primary" th:href="@{/product/{productId}/edit(productId=${product.getId()})}">edit</a></td>
+              <td><a class="btn btn-danger" th:href="@{/product/remove(id=${product.id})}">remove</a></td>
             </tr>
             </tbody>
           </table>
