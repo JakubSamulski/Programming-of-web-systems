@@ -8,12 +8,39 @@
 </head>
 <body>
 <h1>Add a new product</h1>
-<form action="#" th:action="@{/product/add}" th:object="${product}" method="post">
-  <p>Id: <input type="text" th:field="*{id}" /></p>
-  <p> Name: <input type="text" th:field="*{name}" /></p>
-  <p>Weight: <input type="number" th:field="*{weight}" /></p>
-  <p>Price: <input type="number" th:field="*{price}" /></p>
-  <p>Category: <input type="text" th:field="*{category}" /></p>
+<form class="form form-horizontal" role="form" action="#" th:action="@{/product/add}" th:object="${product}" method="post">
+    <div class="form-group">
+        <div class="col-md-4">
+            <label for="Id" class="form-label">ID</label>
+            <input type="number" class="form-control" id="Id" aria-describedby="idHelp">
+            <div id="idHeplp" class="form-text">Must be positive and unique</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-4">
+          <label for="Name" class="form-label">ProductName</label>
+          <input type="text" class="form-control" id="Name">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-4">
+          <label for="Weight" class="form-label">Weight</label>
+          <input type="number" class="form-control" id="Weight" aria-describedby="weightHelp">
+          <div id="weightHelp" class="form-text">Must be positive </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-group col-md-4">
+          <label for="Price" class="form-label">Price</label>
+          <input type="number" class="form-control" id="Price" aria-describedby="priceHelp">
+          <div id="priceHelp" class="form-text">Must be positive and reasonable</div>
+        </div>
+    </div>
+
+<!--  <p> Name: <input type="text" th:field="*{name}" /></p>-->
+<!--  <p>Weight: <input type="number" th:field="*{weight}" /></p>-->
+<!--  <p>Price: <input type="number" th:field="*{price}" /></p>-->
+<!--  <p>Category: <input type="text" th:field="*{category}" /></p>-->
   <p><input type="submit" value="Add" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>
