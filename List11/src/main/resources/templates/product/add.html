@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org en">
 <head>
-  <meta charset="text/html; UTF-8">
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>Add product form</title>
+    <meta charset="text/html; UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Add product form</title>
 </head>
 <body style="padding-left: 1em">
 <h1>Add a new product</h1>
-<form class="form form-horizontal" role="form" action="#" th:action="@{/product/add}" th:object="${product}" method="post">
+<form class="form form-horizontal" role="form" action="#" th:action="@{/product/add}" th:object="${product}"
+      method="post">
 
-    <div class="form-group" >
+    <div class="form-group">
         <div class="col-md-3">
             <label for="Id" class="form-label">ID</label>
-            <input type="number" class="form-control" id="Id" aria-describedby="idHelp">
-            <div id="idHeplp"  th:field="*{id}" class="form-text">Must be positive and unique</div>
+            <input type="number" th:field="*{id}" class="form-control" id="Id" aria-describedby="idHelp">
+            <div id="idHeplp" class="form-text">Must be positive and unique</div>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-3">
-          <label for="Name" class="form-label">ProductName</label>
-          <input type="text" th:field="*{name}" class="form-control" id="Name">
+            <label for="Name" class="form-label">ProductName</label>
+            <input type="text" th:field="*{name}" class="form-control" id="Name">
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-3">
-          <label for="Weight" class="form-label">Weight</label>
-          <input type="number"  th:field="*{weight}" class="form-control" id="Weight" aria-describedby="weightHelp">
-          <div id="weightHelp" class="form-text">Must be positive </div>
+            <label for="Weight" class="form-label">Weight</label>
+            <input type="number" th:field="*{weight}" class="form-control" id="Weight" aria-describedby="weightHelp">
+            <div id="weightHelp" class="form-text">Must be positive</div>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-3">
-          <label for="Price" class="form-label">Price</label>
-          <input type="number" class="form-control" th:field="*{price}"  id="Price" aria-describedby="priceHelp">
-          <div id="priceHelp" class="form-text">Must be positive and reasonable</div>
+            <label for="Price" class="form-label">Price</label>
+            <input type="number" class="form-control" th:field="*{price}" id="Price" aria-describedby="priceHelp">
+            <div id="priceHelp" class="form-text">Must be positive and reasonable</div>
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-3">
             <label for="category" class="form-label">Category</label>
-            <input type="text" th:field="*{category}" class="form-control" id="category" >
+            <input type="text" th:field="*{category}" class="form-control" id="category">
         </div>
     </div>
 
 
-    <input type="submit" class="btn btn-primary" value="Add" />
-    <input type="reset" class="btn btn-danger" value="Reset" />
+    <input type="submit" class="btn btn-primary" value="Add"/>
+    <input type="reset" class="btn btn-danger" value="Reset"/>
 </form>
 </body>
 </html>

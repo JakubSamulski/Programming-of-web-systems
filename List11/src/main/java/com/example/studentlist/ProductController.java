@@ -23,9 +23,9 @@ public class ProductController {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
                 DateFormat.LONG, locale);
         String serverTime = dateFormat.format(date);
-        model.addAttribute("serverTime", serverTime.toString() );
-        List<Product> productList = productService.getAllStudent();
-        model.addAttribute("productList", productList );
+        model.addAttribute("serverTime", serverTime.toString());
+        List<Product> productList = productService.getAllProducts();
+        model.addAttribute("productList", productList);
         return "product/index";
     }
 
@@ -38,13 +38,13 @@ public class ProductController {
 
     @GetMapping("/product/add")
     public String add(Model model) {
-        model.addAttribute("product", new Product() );
+        model.addAttribute("product", new Product());
         return "product/add";
     }
 
     @PostMapping("/product/add")
     public String add(@ModelAttribute Product product) {
-        productService.addStudent(product);
+        productService.addProduct(product);
         return "redirect:/product/";
     }
 
@@ -53,7 +53,7 @@ public class ProductController {
     // e.a. /student/details?id=3
     @GetMapping("/product/details")
     public String add(@RequestParam("id") long inputId, Model model) {
-        model.addAttribute("product", productService.getStudentById(inputId) );
+        model.addAttribute("product", productService.getProductById(inputId));
         return "/product/details";
     }
 
@@ -61,13 +61,13 @@ public class ProductController {
     // e.a. /student/3/edit
     @GetMapping(value = {"/product/{prodId}/edit"})
     public String edit(Model model, @PathVariable Integer prodId) {
-        model.addAttribute("product", productService.getStudentById(prodId) );
+        model.addAttribute("product", productService.getProductById(prodId));
         return "/product/edit";
     }
 
     @PostMapping(value = {"/product/edit"})
     public String edit(@ModelAttribute Product product) {
-        productService.updateStudent(product);
+        productService.updateProduct(product);
         return "redirect:/product/";
     }
 
@@ -75,7 +75,7 @@ public class ProductController {
     // e.a. /student/remove?id=3
     @GetMapping("/product/remove")
     public String remove(@RequestParam("id") long id) {
-        productService.deleteStudentById(id);
+        productService.deleteProductById(id);
         return "redirect:/product/";
     }
 
