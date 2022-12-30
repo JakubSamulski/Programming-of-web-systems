@@ -1,4 +1,4 @@
-package com.example.studentlist;
+package com.example.productlist;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

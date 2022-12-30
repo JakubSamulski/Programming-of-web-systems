@@ -1,4 +1,4 @@
-package com.example.studentlist;
+package com.example.productlist;
 
 import org.springframework.stereotype.Service;
 
@@ -13,9 +13,9 @@ public class ProductService {
     }
 
     public void seed() {
-        productList.add(new Product(1, "Chleb", 1, 10.8, "pieczywo"));
-        productList.add(new Product(2, "Bulka", 0.1, 0.8, "pieczywo"));
-        productList.add(new Product(3, "Mleko", 1, 2.5, "nabial"));
+//        productList.add(new Product(1, "Chleb", 1, 10.8, "pieczywo"));
+//        productList.add(new Product(2, "Bulka", 0.1, 0.8, "pieczywo"));
+//        productList.add(new Product(3, "Mleko", 1, 2.5, "nabial"));
     }
 
     private boolean isEmpty() {
