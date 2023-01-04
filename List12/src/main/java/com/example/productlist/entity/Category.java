@@ -21,7 +21,7 @@ public class Category {
     private String name;
     private String code;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
     @ToString.Exclude
     private List<Product> product;
 

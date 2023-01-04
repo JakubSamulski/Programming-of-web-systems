@@ -30,7 +30,7 @@ public class CategoryController {
         model.addAttribute("serverTime", serverTime.toString());
         List<Category> categoryList = categoryService.getAllCategories();
         model.addAttribute("categoryList", categoryList);
-        return "product/index";
+        return "category/index";
     }
 
 
@@ -62,12 +62,12 @@ public class CategoryController {
     @PostMapping(value = {"/edit"})
     public String edit(@ModelAttribute Category category) {
         categoryService.updateCategory(category);
-        return "redirect:/product/";
+        return "redirect:/category/";
     }
 
     @GetMapping("/remove")
     public String remove(@RequestParam("id") long id) {
         categoryService.deleteCategoryById(id);
-        return "redirect:/product/";
+        return "redirect:/category/";
     }
 }
