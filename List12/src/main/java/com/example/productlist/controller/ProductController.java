@@ -1,6 +1,7 @@
 package com.example.productlist.controller;
 
 import com.example.productlist.entity.Product;
+import com.example.productlist.service.CategoryService;
 import com.example.productlist.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +16,11 @@ import java.util.Locale;
 @RequestMapping("/product")
 public class ProductController {
     private final ProductService productService;
+    private final CategoryService categoryService;
 
-    public ProductController(ProductService productService) {
+    public ProductController(ProductService productService , CategoryService categoryService) {
         this.productService = productService;
+        this.categoryService = categoryService;
     }
 
     @GetMapping
@@ -41,12 +44,14 @@ public class ProductController {
 
     @GetMapping("/add")
     public String add(Model model) {
+        model.addAttribute("categoryList",categoryService.getAllCategories());
         model.addAttribute("product", new Product());
         return "product/add";
     }
 
     @PostMapping("/add")
     public String add(@ModelAttribute Product product) {
+        System.out.println(product.getCategory());
         productService.addProduct(product);
         return "redirect:/product/";
     }

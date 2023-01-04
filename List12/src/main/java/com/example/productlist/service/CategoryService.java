@@ -16,7 +16,6 @@ public class CategoryService {
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;
     }
-
     private boolean isEmpty() {
         return categoryRepository.findAll().size() == 0;
     }

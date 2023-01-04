@@ -41,7 +41,11 @@
     <div class="form-group">
         <div class="col-md-3">
             <label for="category" class="form-label">Category</label>
-            <input type="text" th:field="*{category}" class="form-control" id="category">
+            <select th:field="*{category}" id="category" class="form-control">
+                <option th:each="category : ${categoryList}" th:value="${category}" th:text="${category.getName()}">
+                </option>
+            </select>
+<!--            <input type="text" th:field="*{category}" class="form-control" id="category">-->
         </div>
     </div>
 

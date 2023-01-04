@@ -4,11 +4,11 @@
     <meta charset="text/html; UTF-8">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Add product form</title>
+    <title>Add category form</title>
 </head>
 <body style="padding-left: 1em">
-<h1>Add a new product</h1>
-<form class="form form-horizontal" role="form" action="#" th:action="@{/product/add}" th:object="${product}"
+<h1>Add a new category</h1>
+<form class="form form-horizontal" role="form" action="#" th:action="@{/category/add}" th:object="${category}"
       method="post">
 
     <div class="form-group">
@@ -20,32 +20,17 @@
     </div>
     <div class="form-group">
         <div class="col-md-3">
-            <label for="Name" class="form-label">ProductName</label>
+            <label for="Name" class="form-label">category name</label>
             <input type="text" th:field="*{name}" class="form-control" id="Name">
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-3">
-            <label for="Weight" class="form-label">Weight</label>
-            <input type="number" th:field="*{weight}" class="form-control" id="Weight" aria-describedby="weightHelp">
-            <div id="weightHelp" class="form-text">Must be positive</div>
+            <label for="Code" class="form-label">Code</label>
+            <input type="number" th:field="*{code}" class="form-control" id="Code" aria-describedby="CodeHelp">
+            <div id="CodeHelp" class="form-text">Must be positive</div>
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-3">
-            <label for="Price" class="form-label">Price</label>
-            <input type="number" class="form-control" th:field="*{price}" id="Price" aria-describedby="priceHelp">
-            <div id="priceHelp" class="form-text">Must be positive and reasonable</div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-3">
-            <label for="category" class="form-label">Category</label>
-            <input type="text" th:field="*{category}" class="form-control" id="category">
-        </div>
-    </div>
-
-
     <input type="submit" class="btn btn-primary" value="Add"/>
     <input type="reset" class="btn btn-danger" value="Reset"/>
 </form>
