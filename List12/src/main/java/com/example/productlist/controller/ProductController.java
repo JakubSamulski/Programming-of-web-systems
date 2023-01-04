@@ -1,5 +1,7 @@
-package com.example.productlist;
+package com.example.productlist.controller;
 
+import com.example.productlist.entity.Product;
+import com.example.productlist.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import java.util.List;
 import java.util.Locale;
 
 @Controller
+@RequestMapping("/product")
 public class ProductController {
     private final ProductService productService;
 
@@ -17,7 +20,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/product/")
+    @GetMapping
     public String home(Locale locale, Model model) {
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG,
@@ -29,20 +32,20 @@ public class ProductController {
         return "product/index";
     }
 
-    @GetMapping("/product/seed")
+    @GetMapping("/seed")
     public String seed() {
         productService.seed();
         return "redirect:/product/";
     }
 
 
-    @GetMapping("/product/add")
+    @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("product", new Product());
         return "product/add";
     }
 
-    @PostMapping("/product/add")
+    @PostMapping("/add")
     public String add(@ModelAttribute Product product) {
         productService.addProduct(product);
         return "redirect:/product/";
@@ -51,7 +54,7 @@ public class ProductController {
 
     // how to put a parameter in a query string
     // e.a. /student/details?id=3
-    @GetMapping("/product/details")
+    @GetMapping("/details")
     public String add(@RequestParam("id") long inputId, Model model) {
         model.addAttribute("product", productService.getProductById(inputId));
         return "/product/details";
@@ -59,13 +62,13 @@ public class ProductController {
 
     // how to put parameter in an URL
     // e.a. /student/3/edit
-    @GetMapping(value = {"/product/{prodId}/edit"})
+    @GetMapping(value = {"/{prodId}/edit"})
     public String edit(Model model, @PathVariable Integer prodId) {
         model.addAttribute("product", productService.getProductById(prodId));
         return "/product/edit";
     }
 
-    @PostMapping(value = {"/product/edit"})
+    @PostMapping(value = {"/edit"})
     public String edit(@ModelAttribute Product product) {
         productService.updateProduct(product);
         return "redirect:/product/";
@@ -73,7 +76,7 @@ public class ProductController {
 
     // how to put a parameter in a query string
     // e.a. /student/remove?id=3
-    @GetMapping("/product/remove")
+    @GetMapping("/remove")
     public String remove(@RequestParam("id") long id) {
         productService.deleteProductById(id);
         return "redirect:/product/";
