@@ -1,6 +1,8 @@
 package com.example.productlist.controller;
 
+import com.example.productlist.entity.Category;
 import com.example.productlist.entity.Product;
+import com.example.productlist.optionModel.IdStruct;
 import com.example.productlist.service.CategoryService;
 import com.example.productlist.service.ProductService;
 import org.springframework.stereotype.Controller;
@@ -46,12 +48,15 @@ public class ProductController {
     public String add(Model model) {
         model.addAttribute("categoryList",categoryService.getAllCategories());
         model.addAttribute("product", new Product());
+        model.addAttribute("chosenCategory", new IdStruct());
         return "product/add";
     }
 
     @PostMapping("/add")
-    public String add(@ModelAttribute Product product) {
-        System.out.println(product.getCategory());
+    public String add(@ModelAttribute Product product, @ModelAttribute IdStruct chosenCategoryId ) {
+        System.out.println(chosenCategoryId.getIdS());
+        Category chosenCategory  = categoryService.getCategoryById(chosenCategoryId.getIdS());
+        product.setCategory(chosenCategory);
         productService.addProduct(product);
         return "redirect:/product/";
     }
@@ -69,12 +74,20 @@ public class ProductController {
     // e.a. /student/3/edit
     @GetMapping(value = {"/{prodId}/edit"})
     public String edit(Model model, @PathVariable Integer prodId) {
-        model.addAttribute("product", productService.getProductById(prodId));
+        Product product = productService.getProductById(prodId);
+        List<Category>categoryList=  categoryService.getAllCategories();
+        categoryList.remove(product.getCategory());
+        model.addAttribute("product", product);
+        model.addAttribute("categoryList",categoryList);
+        model.addAttribute("chosenCategory", new IdStruct());
         return "/product/edit";
     }
 
     @PostMapping(value = {"/edit"})
-    public String edit(@ModelAttribute Product product) {
+    public String edit(@ModelAttribute Product product, @ModelAttribute IdStruct chosenCategoryId) {
+        System.out.println(chosenCategoryId.getIdS());
+        Category chosenCategory  = categoryService.getCategoryById(chosenCategoryId.getIdS());
+        product.setCategory(chosenCategory);
         productService.updateProduct(product);
         return "redirect:/product/";
     }

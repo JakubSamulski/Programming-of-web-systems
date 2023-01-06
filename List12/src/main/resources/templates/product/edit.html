@@ -39,11 +39,17 @@
   </div>
 
   <div class="form-group">
-    <div class="col-md-3">
+    <div class="col-md-3" th:object="${chosenCategory}">
       <label for="category" class="form-label">Category</label>
-      <input type="text" th:field="*{category}" class="form-control" id="category" >
+      <select th:field="*{idS}" id="category" class="form-control">
+        <option th:value="${product.category.getId()}" th:text="${product.category.getName()}" selected="selected"></option>
+        <option th:each="category : ${categoryList}" th:value="${category.getId()}" th:text="${category.getName()}">
+        </option>
+      </select>
+      <!--            <input type="text" th:field="*{category}" class="form-control" id="category">-->
     </div>
   </div>
+
 
   <input type="submit" class="btn btn-primary" value="Modify" />
   <input type="reset" class="btn btn-danger" value="Reset" />
